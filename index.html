@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiCake</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #edb45d;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #edb45d;
+            font-weight: bold;
+        }
+        section {
+            margin: 2rem;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left; /* Alinea el texto hacia la izquierda */
+        }
+        h2 {
+            color: #edb45d;
+        }
+        .hidden {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        footer {
+            text-align: center;
+            padding: 0.5rem;
+            background-color: #edb45d;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Tema General: <span id="topicTitle">Panadería y Repostería</span></h1>
+</header>
+
+<nav>
+    <a href="#" onclick="showSection('section1')">Tema 1: Historia</a>
+    <a href="#" onclick="showSection('section2')">Tema 2: Mayores Exponentes</a>
+    <a href="#" onclick="showSection('section3')">Tema 3: Trivia</a>
+</nav>
+
+<section id="section1" class="active">
+    <h2>Historia de la Panadería y Reposteria</h2>
+    <b>Historia de la Panadería.</b>
+    <h2>Tema 1.5: Historia de la Repostería</h2>
+<img = crossorigin="use-credentials">
+    <p>Detrás del pastel de chocolate, tarta de manzana o pie de queso se esconde más que una receta,<br>
+        una serie de ingredientes o un proceso arduo de elaboración. Detrás de esa deliciosa preparación <br>
+        se encuentra un recuento de datos y anécdotas que conforman la historia de la repostería.<br>
+    </p>
+    <b>Origen de la Reposteria</b>
+    <p>En su sentido más estricto, podríamos decir que la repostería tiene solo un par de siglos como la <br>
+        disciplina encargada de preparar todo tipo de pasteles; sin embargo, lo cierto es que el origen de <br>
+        la repostería data de hace miles de años. <br>
+    </p>
+    <p>Los primeros antecedentes de la repostería se remontan hace más de 7 mil años en el antiguo <br>
+        Egipto y Mesopotamia. Si nos basamos en su etimología, la palabra pastel deriva de pastelería, que <br>
+        a su vez proviene del vocablo griego pasté, que es como se designaba a la mezcla de harinas con <br>
+        salsas.<br>
+    </p>
+    <b>¿Quién inventó la repostería?</b>
+    <p>
+        Es importante mencionar que la historia de la repostería podría clasificarse en dos vertientes:<br>
+        antigua y moderna. Mientras que la repostería moderna cuenta con diversos registros, nombres y <br>
+        fechas de origen, la repostería antigua es todo lo contrario, pues es imposible determinar un <br>
+        personaje o lugar exacto de origen. <br>
+    </p>
+    <b>La repostería en la Edad Media </b>
+    <P>
+        Durante esta época, la repostería comenzó a tener una estrecha relación con la religión, incluso <br>
+        hasta el grado de convertirse en un conocimiento exclusivo de las autoridades eclesiásticas. <br>
+        Posteriormente, tras el surgimiento de las cruzadas, los europeos tendrían contacto con otro tipo <br>
+        de culturas y productos como el azúcar y diversas pastas. <br>
+    </P>
+    <p>
+        Sin embargo, es hasta 1440 que se comienza a hacer uso de la palabra pasteleros para designar <br>
+        una ordenanza. Bajo el reinado de Carlos IX, en 1556, nace la primera corporación de pasteleros, <br>
+        razón por la cual se considera el primer antecedente de la repostería moderna. <br>
+    </p>
+</section>
+
+<section id="section2" class="hidden">
+    <h2>Tema 2: Mayores Exponentes</h2>
+    <i>"La historia de la repostería es el dulce reflejo de la creatividad humana, heredada de generación en generación"</i>
+<b>Principales exponentes de la repostería</b>
+<p>
+    Apicio<br>
+    Marco Gavicio Apicio fue un gastrónomo romano y autor del libro De re coquinaria. Este libro es <br>
+    considerado como uno de los primeros antecedentes de la repostería y el registro de recetas más <br>
+    viejo del mundo. Actualmente, la obra de Apicio es considerada una fuente importante de <br>
+    
+</p>
+</section>
+
+<section id="section3" class="hidden">
+    <h2>Tema 3: Conclusiones</h2>
+    <p>Finalmente, puedes agregar las conclusiones o reflexiones sobre el tema.</p>
+    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</section>
+
+<footer>
+    <p>&copy; WikiCake by Molina</p>
+</footer>
+
+<script>
+    function showSection(sectionId) {
+        // Ocultar todas las secciones
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            section.classList.remove('active');
+            section.classList.add('hidden');
+        });
+
+        // Mostrar la sección seleccionada
+        const selectedSection = document.getElementById(sectionId);
+        selectedSection.classList.remove('hidden');
+        selectedSection.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
